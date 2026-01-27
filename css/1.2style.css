@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+:root {
+    --body-color: #834D33;
+    --text-color: #C0876A;
+    --text-colors: #fff;
+    --hover-color: #EBBA62;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--body-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* *********************************** HEADER ********************HEADER*************** */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 5px;
+}
+
+.nav_menu {
+    display: flex;
+    gap: 30px;
+    transition: all .3s;
+}
+
+.nav_menu a {
+    color: var(--text-colors);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.nav_menu a:hover {
+    color: var(--hover-color);
+    background-color: var(--text-colors);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.nav_icons i{
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.nav_toggle {
+    display: none;
+    color: var(--text-colors);
+}
+
+/* *********************************** HOME **********************HOME************** */
+.home {
+    padding-top: 200px;
+}
+
+.home_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home_text h1 {
+    font-size: 4rem;
+    color: yellow;
+}
+
+.home_text h2 {
+    margin: 20px 0;  /* 20px Top 0px left*/
+}
+
+.home_btn {
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 30px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.inline {
+    background: #C40817;
+    color: black;
+    border: 2px solid white;
+    transition: .1s;
+}
+.inline:hover{
+    background-color: var(--hover-color);
+    color: white;
+}
+
+.outline {
+    border: 2px solid white;
+    color: white;
+    transition: .3s;
+}
+
+.outline:hover{
+    background-color: var(--hover-color);
+}
+
+.home_img {
+    width: 300px;
+}
+
+/* *********************************** MENU **********************MEUN************* */
+.menu {
+    margin-top: 200px;
+}
+
+.section_title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: var(--text-colors);
+}
+
+.menu_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #A486B0;
+    color: black;
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    transition: .3s;
+}
+.card img:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--body-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.card button {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.buy{
+    font-weight: bolder;
+    color: gray;
+}
+
+.menu button{
+    border: 2px solid black;
+    background-color: var(--body-color);
+    transition: .3s ease-in;
+}
+
+.menu button:hover{
+    background-color: var(--hover-color);
+}
+
+/* *********************************** ABOUT**********************ABOUT******* */
+.about {
+    margin-top: 200px;
+}
+
+.about_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.about_box {
+    background: rgba(255,255,255,.1);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+/* *********************************** CONTACT  ******************CONTACT***************** */
+
+.contact{
+    margin-top: 200px;
+}
+
+.contact_card{
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.contact_card h1{
+    text-align: center;
+    color: #5a3e2b;
+}
+
+.address{
+    font-weight: bold;
+    margin-top: 15px;
+    color: yellowgreen;
+}
+
+.contact_card a{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.contact_card a:hover{
+    color: white;
+}
+
+/* *********************************** RESPONSIVE  ******************RESOPONSIVED***************** */
+@media (max-width: 800px) {
+
+    .header {
+        background: rgba(0,0,0,0.5);
+        backdrop-filter: blur(15px);
+    }
+    .logo {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    .nav_menu {
+        position: absolute;
+        top: 70px;
+        right: -220px;
+        width: 200px;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 15px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        transition: all 0.3s ease;
+    }
+    .nav_menu a {
+        font-size: 1.2rem;
+        color: black;
+    }
+    .nav_toggle {
+        display: block;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    .show_menu {
+        right: 0;
+    }
+    .home {
+        padding-top: 120px;
+    }
+    .home_container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home_text h1 {
+        font-size: 2.5rem;
+    }
+    .home_text h2 {
+        font-size: 1.2rem;
+    }
+    .home_text p {
+        font-size: 0.9rem;
+        line-height: 2rem;   
+    }
+    .home_img {
+        width: 220px;
+        margin-top: 30px;
+    }
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+        display: block;
+        margin: 10px auto;
+    }
+    .menu {
+        margin-top: 150px;
+    }
+    .menu_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); /* single column for mobile */
+        gap: 20px;
+    }
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    .card p {
+        font-size: 0.9rem;
+    }
+    .about {
+        margin-top: 150px;
+    }
+    .about_grid {
+        grid-template-columns:  repeat(auto-fit,minmax(200px,1fr));
+        gap: 20px;
+    }
+    .about_box h3 {
+        font-size: 1.2rem;
+    }
+    .about_box p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .contact {
+        margin-top: 150px;
+    }
+    .contact_card {
+        width: 90%;
+        padding: 20px;
+    }
+    .contact_card h1 {
+        font-size: 1.4rem;
+    }
+    .contact_card p,
+    .contact_card a {
+        font-size: 0.9rem;
+    }
+}
